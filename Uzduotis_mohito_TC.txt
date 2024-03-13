@@ -1,0 +1,41 @@
+https://www.mohito.com/lt/lt/customer/account/login/
+
+TC01 NAUJOS PASKIROS SUKURIMAS:
+	1. Atsidarom regitracijos nuororda: 
+		https://www.mohito.com/lt/lt/customer/account/login/
+	2. Priimam cookies
+------------------setup-------------------
+	3. Spaudziam ant mygtuko "sukurti paskyra"
+	4. Ivedame el. pasta: valiuspus@gmail.com
+	5. Ivedame varda: Valentinas
+	6. Ivedame pavarde: Pusvaskis
+	7. Ivedame slaptazodi: slaptazodis123
+	8. Spaudziame "sukurti paskyra"
+	
+	Expected: Atsidaro naujo profilio langas ir laukelyje EL. PASTAS 
+nurodytas teisingas e-pasto adresas
+
+   
+TC02 PRISIJUNGIMAS:
+	1. Atsidarom prisijungimo nuororda: 
+		https://www.mohito.com/lt/lt/customer/account/login/
+	2. Priimam cookies
+------------------setup-------------------
+	3. Ivedame uzregistruota el.pasta: valiuspus@gmail.com
+	4. Ivedame uzregistruotos paskyros slaptazodi: slaptazodis123
+	5. Spaudziame "Prisijungti"
+	7. Spaudziame profilio ikonele su profilio vardu
+
+	...
+	Expected: laukelyje EL. PASTAS nurodytas teisingas e-pasto adresas
+
+
+TC03PASKIROS PASALINIMAS:
+	1. Atliekame zingsnius: TC02
+------------------setup-------------------
+	2. Spaudziame "spauskite cia" kad panaikintume paskyra
+	3. Atsidariusiame accountRemoval puslapyje spaudziame "Jei
+norite panaikinti savo paskyra, spauskite cia"
+	...
+	Expected: Atsidaro puslapis AccountRemoval/secondstep ir parasoma, 
+kad i paskyros el. pasta yra nusiusta paskyros naikinimo nuoroda
