@@ -10,33 +10,50 @@ public class CustomerLoginPage {
     }
 
     public static void clickAcceptCookies() {
-        boolean isElementVisible = Common.waitElementVisible(Locators.mohitoShop.customerLogin.buttonOfCookiesOK,8);
+        boolean isElementVisible = Common.waitElementVisible(Locators.MohitoShop.CustomerLogin.buttonOfCookiesOK, 8);
         if (isElementVisible) {
-            Common.clickOnElement(Locators.mohitoShop.customerLogin.buttonOfCookiesOK);
+            Common.clickOnElement(Locators.MohitoShop.CustomerLogin.buttonOfCookiesOK);
         }
     }
 
-    public static void inputDataEmail(String email) {
-        Common.sendKeysToElement(Locators.mohitoShop.customerLogin.fieldOfEmailInRegistration, email);
+    public static void inputDataEmailInRegistration(String email) {
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfEmailInRegistration, email);
     }
 
     public static void clickButtonRegisterSelect() {
-        Common.clickOnElement(Locators.mohitoShop.customerLogin.buttonRegisterSelect);
+        Common.clickOnElement(Locators.MohitoShop.CustomerLogin.buttonRegisterSelect);
     }
 
     public static void inputDataName(String name) {
-        Common.sendKeysToElement(Locators.mohitoShop.customerLogin.fieldOfNameInRegistration, name);
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfNameInRegistration, name);
     }
 
     public static void inputDataSurname(String surname) {
-        Common.sendKeysToElement(Locators.mohitoShop.customerLogin.fieldOfSurnameInRegistration, surname);
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfSurnameInRegistration, surname);
     }
 
-    public static void inputDataPassword(String password) {
-        Common.sendKeysToElement(Locators.mohitoShop.customerLogin.fieldOfPasswordInRegistration, password);
+    public static void inputDataPasswordInRegitration(String password) {
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfPasswordInRegistration, password);
     }
 
     public static void clickButtonCreateAccountSubmit() {
-        Common.clickOnElement(Locators.mohitoShop.customerLogin.buttonCreateAccountSubmit);
+        Common.clickOnElement(Locators.MohitoShop.CustomerLogin.buttonCreateAccountSubmit);
+    }
+
+    public static void inputDataEmailLogin(String email) {
+        Common.waitElementLoaded(Locators.MohitoShop.CustomerLogin.fieldOfEmailLogin, 10);
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfEmailLogin, email);
+    }
+
+    public static void inputDataPasswordLogin(String password) {
+        Common.sendKeysToElement(Locators.MohitoShop.CustomerLogin.fieldOfPasswordLogin, password);
+    }
+
+    public static void clickButtonLogin() {
+        Common.clickOnElement(Locators.MohitoShop.CustomerLogin.buttonLoginSubmit);
+    }
+
+    public static void refreshPage() {
+        Common.refreshPage();
     }
 }

@@ -25,6 +25,10 @@ public class Common {
         Driver.getChromeDriver().get(url);
     }
 
+    public static void refreshPage(){
+        Driver.getChromeDriver().navigate().refresh();
+    }
+
     public static void quitChromeDriver() {
         Driver.quitChromeDriver();
     }
