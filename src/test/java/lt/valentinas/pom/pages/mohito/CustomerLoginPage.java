@@ -56,4 +56,13 @@ public class CustomerLoginPage {
     public static void refreshPage() {
         Common.refreshPage();
     }
+
+    public static void login(String email, String password) {
+        CustomerLoginPage.refreshPage();
+        CustomerLoginPage.inputDataEmailLogin(email);
+        CustomerLoginPage.inputDataPasswordLogin(password);
+        CustomerLoginPage.clickButtonLogin();
+
+        HomeIndexPage.clickProfileButton();
+    }
 }

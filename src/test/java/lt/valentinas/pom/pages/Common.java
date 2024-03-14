@@ -25,7 +25,11 @@ public class Common {
         Driver.getChromeDriver().get(url);
     }
 
-    public static void refreshPage(){
+    public static void navigateUrl(String url) {
+        Driver.getChromeDriver().navigate().to(url);
+    }
+
+    public static void refreshPage() {
         Driver.getChromeDriver().navigate().refresh();
     }
 
@@ -83,7 +87,7 @@ public class Common {
     }
 
     public static void waitElementLoaded(By locator, int seconds) {
-        WebDriverWait wait = new WebDriverWait(Driver.getChromeDriver(),Duration.ofSeconds(seconds));
+        WebDriverWait wait = new WebDriverWait(Driver.getChromeDriver(), Duration.ofSeconds(seconds));
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 

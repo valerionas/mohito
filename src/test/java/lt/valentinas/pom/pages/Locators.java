@@ -19,10 +19,22 @@ public class Locators {
 
         public static class CustomerAccountEdit {
             public static By fieldCustomerEmail = By.xpath("//input[@id='customer-email']");
+            public static By linkDeleteAccount = By.xpath(
+                    "//a[@href='https://www.mohito.com/lt/lt/account-management/accountRemoval/firststep/']"
+            );
         }
 
         public class HomeIndex {
             public static By divOfProfile = By.xpath("//div[@data-testid='account-info-logged-true']");
+        }
+
+        public class AccountRemovalFirstStep {
+
+            public static By buttonRemoveAccountNow = By.xpath("//a[@class='remove-account-link']");
+        }
+
+        public class AccountRemovalSecondStep {
+            public static By spanWithAccountEmail = By.xpath("//span[@class='account-mail']");
         }
     }
 }
