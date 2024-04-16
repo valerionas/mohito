@@ -32,7 +32,7 @@ public class CustomerSignUpTest extends TestBase {
         CustomerLoginPage.inputDataPasswordInRegitration(password);
         CustomerLoginPage.clickButtonCreateAccountSubmit();
 
-        CustomerAccountEditPage.loadFieldCustomerEmail();
+        CustomerAccountEditPage.waitFieldCustomerEmail();
         String actualResult = CustomerAccountEditPage.getValueCustomerEmailField();
 
         Assert.assertTrue(

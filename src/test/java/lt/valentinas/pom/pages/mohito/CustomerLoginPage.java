@@ -62,7 +62,6 @@ public class CustomerLoginPage {
         CustomerLoginPage.inputDataEmailLogin(email);
         CustomerLoginPage.inputDataPasswordLogin(password);
         CustomerLoginPage.clickButtonLogin();
-
         HomeIndexPage.clickProfileButton();
     }
 }

@@ -28,11 +28,8 @@ public class AccountRemovalTest extends TestBase {
     public void testDeleteAccount(String email, String password, String expectedResult) {
         CustomerLoginPage.login(email, password);
 
-//         Truputi negerai, nes netestuojama ar Link'as yra siame puslapyje
-//        CustomerAccountEditPage.navigateDeleteAccountStep1();
         CustomerAccountEditPage.clickDeleteAccountLink();
         AccountRemovalPage.clickButtonDeleteAccountNow();
-
         String actualResult = AccountRemovalPage.readSpanEmail();
 
         Assert.assertTrue(

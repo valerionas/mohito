@@ -2,7 +2,6 @@ package lt.valentinas.pom.tests.mohito;
 
 import lt.valentinas.pom.pages.mohito.CustomerAccountEditPage;
 import lt.valentinas.pom.pages.mohito.CustomerLoginPage;
-import lt.valentinas.pom.pages.mohito.HomeIndexPage;
 import lt.valentinas.pom.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -25,15 +24,10 @@ public class CustomerLoginTest extends TestBase {
     }
 
     @Test(dataProvider = "dataProviderTestLogin")
-    public void testLogin(String email, String password, String expectedResult) {
-        CustomerLoginPage.refreshPage();
-        CustomerLoginPage.inputDataEmailLogin(email);
-        CustomerLoginPage.inputDataPasswordLogin(password);
-        CustomerLoginPage.clickButtonLogin();
+    public void testLogin_ProvidedCorrectInput(String email, String password, String expectedResult) {
+        CustomerLoginPage.login(email, password);
 
-        HomeIndexPage.clickProfileButton();
-
-        CustomerAccountEditPage.loadFieldCustomerEmail();
+        CustomerAccountEditPage.waitFieldCustomerEmail();
         String actualResult = CustomerAccountEditPage.getValueCustomerEmailField();
 
         Assert.assertTrue(

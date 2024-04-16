@@ -8,6 +8,7 @@ public class AccountRemovalPage {
         Common.waitElementLoaded(Locators.MohitoShop.AccountRemovalFirstStep.buttonRemoveAccountNow, 10);
         Common.clickOnElement(Locators.MohitoShop.AccountRemovalFirstStep.buttonRemoveAccountNow);
     }
+
     public static String readSpanEmail() {
         Common.waitElementLoaded(Locators.MohitoShop.AccountRemovalSecondStep.spanWithAccountEmail, 10);
         return Common.getTextFromElement(Locators.MohitoShop.AccountRemovalSecondStep.spanWithAccountEmail);

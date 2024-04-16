@@ -8,12 +8,8 @@ public class CustomerAccountEditPage {
         return Common.getValueOfAttributeOfElement(Locators.MohitoShop.CustomerAccountEdit.fieldCustomerEmail, "value");
     }
 
-    public static void loadFieldCustomerEmail() {
+    public static void waitFieldCustomerEmail() {
         Common.waitElementLoaded(Locators.MohitoShop.CustomerAccountEdit.fieldCustomerEmail, 8);
-    }
-
-    public static void navigateDeleteAccountStep1() {
-        Common.navigateUrl("https://www.mohito.com/lt/lt/account-management/accountRemoval/firststep/");
     }
 
     public static void clickDeleteAccountLink() {
